@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap');
+
+:root {
+    --ink: #24221e;
+    --cream: #f1e8d7;
+    --paper: #fbf8f1;
+    --line: #e3d9c8;
+    --muted: #8b8377;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 15px 'IBM Plex Sans Thai', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ส่วนหัวเว็บไซต์ */
+header {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font: 800 22px Manrope;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 10px;
+    display: block;
+    letter-spacing: 4px;
+    color: #c9b894;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+nav a:hover {
+    color: #c9b894;
+}
+
+/* พื้นที่เนื้อหาหลัก */
+.wrap {
+    max-width: 1150px;
+    width: 90%;
+    margin: 30px auto;
+    min-height: 70vh;
+}
+
+/* ส่วนท้ายเว็บไซต์ */
+footer {
+    border-top: 1px solid var(--line);
+    padding: 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* แบนเนอร์หน้าร้าน */
+.hero {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 50px 7%;
+    margin-bottom: 45px;
+}
+
+.hero small,
+.wrap > small,
+.heading small,
+.login small,
+.detail small {
+    font: 700 10px Manrope;
+    letter-spacing: 2px;
+    color: #a58f68;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.25;
+    margin: 16px 0;
+}
+
+.hero em,
+.login-art em {
+    font-style: normal;
+    color: #cbb995;
+}
+
+.hero p {
+    color: #bcb4a7;
+}
+
+/* หัวข้อและตัวกรองหนังสือ */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.heading h2 {
+    margin: 8px 0 20px;
+    font-size: 26px;
+}
+
+.filter {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 28px;
+}
+
+.filter input {
+    flex: 1;
+}
+
+.filter input,
+.filter select,
+input,
+textarea {
+    border: 1px solid #d8cebd;
+    background: #fffdf9;
+    padding: 11px;
+    border-radius: 2px;
+    font: inherit;
+    min-width: 0;
+}
+
+/* ปุ่มทั่วไป */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 16px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--cream);
+    font: 600 12px 'IBM Plex Sans Thai';
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #48443b;
+}
+
+.outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: #cfc3af;
+}
+
+.danger {
+    background: #f3dfd8;
+    color: #873b30;
+    border-color: #e5c4b9;
+}
+
+/* รายการหนังสือ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px 18px;
+}
+
+.card {
+    border: 1px solid var(--line);
+    background: #fffdf9;
+}
+
+.cover {
+    height: 290px;
+    background: #e9e0d0;
+    display: block;
+    padding: 8px;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cardbody {
+    padding: 14px;
+}
+
+.tag {
+    color: #98815b;
+    font-size: 10px;
+}
+
+.card h3 {
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 44px;
+}
+
+.muted {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.price {
+    font: 800 18px Manrope;
+    margin: 12px 0;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+/* รายละเอียดหนังสือ */
+.detail {
+    display: grid;
+    grid-template-columns: minmax(230px, 360px) 1fr;
+    gap: 8%;
+    padding: 25px 4%;
+    align-items: start;
+}
+
+.detail > img {
+    width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    background: #eee5d6;
+    padding: 15px;
+}
+
+.detail h1 {
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.detail h2 {
+    font: 800 27px Manrope;
+}
+
+.detail form {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.detail label {
+    font-size: 12px;
+}
+
+.detail input {
+    display: block;
+    width: 90px;
+}
+
+/* หน้าเข้าสู่ระบบ */
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin: 45px auto;
+    border: 1px solid var(--line);
+    background: white;
+}
+
+.login-art {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 45px;
+}
+
+.login-art h1 {
+    font: 700 38px Manrope;
+    line-height: 1.3;
+}
+
+.login-art p {
+    color: #c4bcaf;
+}
+
+.login-form {
+    padding: 40px;
+}
+
+.login-form h2 {
+    margin: 10px 0;
+}
+
+.login-form form {
+    display: grid;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.login-form label {
+    display: grid;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.login-form .btn {
+    width: 100%;
+}
+
+.hint {
+    background: #f3ecdf;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.error {
+    color: #913a2f;
+    background: #f5e2dc;
+    padding: 10px;
+}
+
+/* ตะกร้าสินค้าและรายการจัดการ */
+.cartrow,
+.manage,
+.order,
+.summary {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.cartrow img,
+.manage img {
+    width: 55px;
+    height: 75px;
+    object-fit: contain;
+    background: #e9e0d0;
+}
+
+.cartrow div,
+.manage span,
+.order span {
+    flex: 1;
+}
+
+.cartrow input {
+    width: 70px;
+}
+
+.cartrow p,
+.manage small,
+.order small {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    padding: 25px 0;
+    font-size: 18px;
+}
+
+/* กล่องข้อมูลและสถานะว่าง */
+.panel {
+    border: 1px solid var(--line);
+    background: #fffdf9;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.empty {
+    text-align: center;
+    padding: 70px 20px;
+    background: #f1e9da;
+    margin: 20px 0;
+}
+
+.summary {
+    justify-content: space-between;
+}
+
+/* ฟอร์มเพิ่มและแก้ไขหนังสือ */
+.formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.formgrid label {
+    display: grid;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.formgrid .full {
+    grid-column: 1 / -1;
+}
+
+.formgrid textarea {
+    min-height: 80px;
+}
+
+.manage span {
+    font-size: 13px;
+}
+
+.order {
+    justify-content: space-between;
+}
+
+/* รองรับแท็บเล็ต */
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cover {
+        height: 260px;
+    }
+
+    .login {
+        margin: 20px auto;
+    }
+
+    .detail {
+        gap: 4%;
+    }
+}
+
+/* รองรับโทรศัพท์มือถือ */
+@media (max-width: 560px) {
+    header {
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .wrap {
+        width: 92%;
+        margin-top: 20px;
+    }
+
+    .hero {
+        padding: 32px 24px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .cover {
+        height: 230px;
+    }
+
+    .cardbody {
+        padding: 10px;
+    }
+
+    .filter {
+        flex-wrap: wrap;
+    }
+
+    .filter input {
+        flex-basis: 100%;
+    }
+
+    .filter select {
+        flex: 1;
+    }
+
+    .detail,
+    .login {
+        grid-template-columns: 1fr;
+    }
+
+    .detail > img {
+        max-height: 420px;
+    }
+
+    .login-art {
+        padding: 28px;
+    }
+
+    .login-art h1 {
+        font-size: 30px;
+    }
+
+    .login-form {
+        padding: 28px;
+    }
+
+    .formgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formgrid .full {
+        grid-column: auto;
+    }
+
+    .cartrow {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .cartrow div {
+        min-width: 120px;
+    }
+
+    .total {
+        flex-wrap: wrap;
+    }
+
+    .manage {
+        gap: 8px;
+    }
+
+    .manage span {
+        font-size: 11px;
+    }
+}
